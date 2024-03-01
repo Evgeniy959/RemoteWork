@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Post>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <h2>@item.Header</h2>
+            <p>@item.Description</p>
+            <p><a class="btn btn-secondary" asp-action="Post" asp-route-id="@item.Id" role="button">View details &raquo;</a></p>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,6 @@
+img {
+  height: 260px;
+  width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */

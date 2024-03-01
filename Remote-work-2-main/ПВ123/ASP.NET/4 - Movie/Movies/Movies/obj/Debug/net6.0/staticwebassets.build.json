@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "DvVt4TVaJFquECEkiKEOKMwnWQ4t/PnfN39m2kGlXuA=",
+  "Source": "Movies",
+  "BasePath": "_content/Movies",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Movies\\wwwroot",
+      "Source": "Movies",
+      "ContentRoot": "D:\\Remote\\Remote-work-2\\ПВ123\\ASP.NET\\4 - Movie\\Movies\\Movies\\wwwroot\\",
+      "BasePath": "_content/Movies",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

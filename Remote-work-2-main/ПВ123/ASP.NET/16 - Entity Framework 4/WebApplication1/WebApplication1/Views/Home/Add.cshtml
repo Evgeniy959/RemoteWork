@@ -1,0 +1,83 @@
+@model Post
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add Post</h1>
+
+
+<form asp-controller="Home" asp-action="Add" method="post">
+    <div asp-validation-summary="All">
+
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" placeholder="Enter title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label"></label>
+        <input asp-for="ImageUrl" class="form-control" placeholder="ImageUrl">
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
+    <label asp-for="CategoryId" class="form-label"></label>
+    <select asp-for="CategoryId" asp-items="@ViewBag.categories" class="form-select" aria-label="Default select example">
+        @*<option selected>Open this select menu</option>
+        @for (int i = 0; i < ViewBag.categories.Count; i++)
+        {
+            <option value="@ViewBag.categories[i].Id">@ViewBag.categories[i].Name</option>
+        }*@
+    </select>
+
+
+    <label class="form-label">Tags:</label>
+    <select name="tags" id="tags" class="form-select" asp-items="@ViewBag.tags" multiple aria-label="Default select example">
+    </select>
+
+    @*<label  class="form-label">Tags:</label>
+    <select id="tags" class="form-select" multiple aria-label="Default select example">
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
+        <option value="four">Four</option>
+        <option value="five">Five</option>
+    </select>*@
+
+    <div class="mb-3">
+        <label asp-for="Content" class="form-label"></label>
+        <textarea rows="10" asp-for="Content"  class="form-control" placeholder="Content"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Add" class="btn btn-primary" />
+</form>
+
+@section Scripts {
+   @* <partial name="_ValidationScriptsPartial"></partial>*@
+
+   <script src="~/lib/chosen/chosen.jquery.min.js"></script>
+
+   <script>
+        $("#tags").chosen();
+   </script>
+}
+
+
+@*
+<form asp-controller="Home" asp-action="Add" method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title : </label>
+        <input type="text" required name="title" id="title" class="form-control" placeholder="Enter title">
+    </div>
+    <div class="mb-3">
+        <label for="ImageUrl" class="form-label">ImageUrl : </label>
+        <input type="text" name="ImageUrl" id="ImageUrl" class="form-control" placeholder="ImageUrl">
+    </div>
+    <div class="mb-3">
+        <label for="content" required class="form-label">Content : </label>
+        <textarea rows="10" name="content" type="text" id="content" class="form-control" placeholder="Content"></textarea>
+    </div>
+    <input type="submit" value="Add" class="btn btn-primary" />
+</form>*@

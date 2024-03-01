@@ -1,0 +1,39 @@
+<!-- <input [(ngModel)]="num1" (input)="onCalcl()" type="number">
+<span>+</span>
+<select (change)="onCalcl()" [(ngModel)]="operation">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input (input)="onCalcl()" [(ngModel)]="num2" type="number">
+
+<button (click)="onCalcl()">Calc</button>
+<span>= {{result}}</span>
+<h3>{{operation}}</h3> -->
+
+<!--
+<input [(ngModel)]="num1" type="number">
+ <span>+</span>
+<select [(ngModel)]="operation">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input [(ngModel)]="num2" type="number">
+
+ <button (click)="onCalcl()">Calc</button>
+<span>= {{result}}</span>
+<h3>{{operation}}</h3> -->
+
+
+
+<input [(ngModel)]="num1" type="number">
+<select [(ngModel)]="operation">
+  <option *ngFor="let item of operations">{{item}}</option>
+</select>
+<input [(ngModel)]="num2" type="number">
+<span>= {{result}}</span>
+<h3>{{operation}}</h3>
+<hr>

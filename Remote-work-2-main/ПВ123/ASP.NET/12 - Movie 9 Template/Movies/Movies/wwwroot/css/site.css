@@ -1,0 +1,74 @@
+
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.card img{
+    height:100%;
+    object-fit:contain;
+    position:relative;
+    z-index:1;
+}
+
+.img-container{
+    height:250px;
+    position:relative;
+}
+
+.card .img-blur {
+    filter: blur(10px);
+    background-position: center;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+        
+}
+
+.card {
+    overflow:hidden;
+}
+
+
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+}
+
+
+
+
+img{
+    height:400px;
+    object-fit:cover;
+}
+
+
+
+.myTitle {
+    height: 60px;
+}
+
+.product-overlay:hover {
+    height: 87% !important;
+}

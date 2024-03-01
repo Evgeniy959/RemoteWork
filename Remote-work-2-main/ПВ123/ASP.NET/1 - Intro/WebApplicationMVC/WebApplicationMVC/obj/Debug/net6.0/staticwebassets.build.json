@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "GAse51H+QuC7Oz505Thk73TV6vcStVEMBhARXRFWs20=",
+  "Source": "WebApplicationMVC",
+  "BasePath": "_content/WebApplicationMVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplicationMVC\\wwwroot",
+      "Source": "WebApplicationMVC",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\WebApplicationMVC\\WebApplicationMVC\\wwwroot\\",
+      "BasePath": "_content/WebApplicationMVC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\WebApplicationMVC\\WebApplicationMVC\\wwwroot\\style.css",
+      "SourceId": "WebApplicationMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\WebApplicationMVC\\WebApplicationMVC\\wwwroot\\",
+      "BasePath": "_content/WebApplicationMVC",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}

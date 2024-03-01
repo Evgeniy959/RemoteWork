@@ -1,0 +1,50 @@
+﻿using Microsoft.Extensions.Options;
+using Movies.Models;
+using Movies.Options;
+using System.Text.Json;
+
+namespace Movies.Services
+{
+    public class MovieApiService : IMovieApiService
+    {
+        //public string BaseUrl { get; set; }
+        //public string ApiKey { get; set; }
+        public MovieApiOptions movieApiOptions { get; set; }
+        public HttpClient httpClient { get; set; }
+
+        public MovieApiService(IHttpClientFactory httpClientFactory,IOptions<MovieApiOptions> options)
+        {
+            //BaseUrl = "https://omdbapi.com/";
+            //ApiKey = "5b9b7798";
+            //BaseUrl = options.Value.BaseUrl;
+            //ApiKey = options.Value.ApiKey;
+            movieApiOptions = options.Value;
+            // httpClient = new HttpClient();
+            httpClient = httpClientFactory.CreateClient();
+        }
+
+        public async Task<MovieApiResponse> SearchByTitleAsync(string title)
+        {
+            var response = await httpClient.GetAsync($"{movieApiOptions.BaseUrl}?s={title}%20man&apikey={movieApiOptions.ApiKey}");
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<MovieApiResponse>(json);
+
+            if (result.Response == "False")
+                throw new Exception(result.Error);
+
+            return result;
+        }
+
+        public async Task<Movie> SearchByIdAsync(string id)
+        {
+            var response = await httpClient.GetAsync($"{movieApiOptions.BaseUrl}?i={id}&apikey={movieApiOptions.ApiKey}");
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<Movie>(json);
+
+            if (result.Response == "False")
+                throw new Exception(result.Error);
+
+            return result;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.csproj.AssemblyReference.cache
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.GeneratedMSBuildEditorConfig.editorconfig
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.AssemblyInfoInputs.cache
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.AssemblyInfo.cs
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.csproj.CoreCompileInputs.cache
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\bin\Debug\net6.0\Extensions.exe
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\bin\Debug\net6.0\Extensions.deps.json
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\bin\Debug\net6.0\Extensions.runtimeconfig.json
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\bin\Debug\net6.0\Extensions.dll
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\bin\Debug\net6.0\Extensions.pdb
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.dll
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\refint\Extensions.dll
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.pdb
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\Extensions.genruntimeconfig.cache
+D:\TMP\Remote-work-2\CПД011\ASP.NET\3 - Movie Api 2\Extensions\Extensions\obj\Debug\net6.0\ref\Extensions.dll

@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@model Post
+
+<form asp-controller="Home" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" placeholder="Enter title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+      <div class="input-group mb-3">
+  <input type="file" name="Image" class="form-control" id="Image">
+  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+</div>
+    <div class="mb-3">
+        <img src="@Model.ImageUrl" />
+    </div>
+    <input hidden asp-for="ImageUrl"/>
+    <label asp-for="CategoryId" class="form-label"></label>
+    <select asp-for="CategoryId" asp-items="@ViewBag.categories" class="form-select" aria-label="Default select example">
+    </select>
+
+
+    <label class="form-label">Tags:</label>
+    <select name="tags" id="tags" class="form-select" asp-items="@ViewBag.tags" multiple aria-label="Default select example">
+    </select>
+
+
+    <div class="mb-3">
+        <label asp-for="Content" class="form-label"></label>
+        <textarea rows="10" asp-for="Content" class="form-control" placeholder="Content"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Update" class="btn btn-primary" />
+</form>
+
+@section Scripts {
+
+    <script src="~/lib/chosen/chosen.jquery.min.js"></script>
+
+    <script>
+        $("#tags").chosen();
+    </script>
+}

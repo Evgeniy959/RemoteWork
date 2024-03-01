@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    int result = 10 + 6;
+}
+
+<div class="text-center">
+   @* <h1 class="display-4">Welcome</h1>
+    <p>Result : @result</p>
+    <h1>Phone number : @ViewData["Phone"]</h1>
+    <h1>Name : @ViewData["Name"]</h1>
+    <hr />
+    <p>@ViewData["Person"]</p>
+    <hr />
+    <p>@ViewBag.Person.Id</p>
+    <p>@ViewBag.Person.Name</p>
+    <hr />
+    <p>@ViewBag.MyName</p>
+    <hr /><hr />
+    <p>@ViewBag.Phone</p>
+    <p>@ViewData["MyName"]</p>*@
+    
+@*    <p>@TempData["gender"]</p>
+    <p>@TempData["gender"]</p>
+    <p>@TempData["gender"]</p>
+
+
+    @if (@Boolean.Parse(TempData["gender"].ToString()))
+    {
+        <p>Hello @TempData["name"]</p>
+    }
+    else
+    {
+          <p>Bye @TempData["name"]</p>
+    }
+
+    @if (@Boolean.Parse(TempData["gender"].ToString()))
+    {
+        <p>Hello @TempData["name"]</p>
+    }
+    else
+    {
+          <p>Bye @TempData["name"]</p>
+    }*@
+
+
+
+
+   
+</ul>
+
+
+
+<h1>Data : @ViewBag.Text</h1>
+
+</div>

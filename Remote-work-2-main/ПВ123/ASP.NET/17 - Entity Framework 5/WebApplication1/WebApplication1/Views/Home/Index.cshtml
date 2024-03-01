@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Post>
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+@if (TempData.ContainsKey("Status"))
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Notification!</strong>@TempData["Status"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+@*<div class="list-group">
+
+
+
+    @foreach (var item in Model)
+    {
+        <a href="#" class="list-group-item list-group-item-action card">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">@item.Title</h5>
+                <small class="text-body-secondary">@item.Date</small>
+            </div>
+            <p class="mb-1">@item.Content</p>
+            @foreach (var postTag in item.PostTags)
+            {
+                <a class="btn btn-outline-info">@postTag.Tag.Name</a>
+            }
+        </a>
+    }
+</div>*@
+
+
+<ol class="list-group list-group-numbered">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <img src="@item.ImageUrl">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">@item.Title (@item.Category.Name)</div>
+                @item.Content
+
+            </div>
+
+             @foreach (var postTag in item.PostTags)
+            {
+                <span class="badge bg-primary rounded-pill">@postTag.Tag.Name</span>
+            }
+
+              <p class="m-2"></p>
+            <a asp-action="Detail" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary m-1">Detail</a>
+            <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-secondary m-1"> Edit </a>
+          
+           
+            
+        </li>
+    }
+
+    
+    
+</ol>
+
+
+@section Scripts{
+    <script>
+        setTimeout (()=>{
+            console.log("Good");
+            $('.alert').hide();
+        },5000);
+    </script>
+}

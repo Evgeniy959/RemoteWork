@@ -1,0 +1,17 @@
+.container {
+  background-color: #F9F2EB;
+  padding: 30px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.container table {
+  font-size: 30px;
+}
+.container table th,
+.container table td {
+  padding: 20px;
+}
+
+body {
+  margin-top: 100px;
+}/*# sourceMappingURL=style.css.map */

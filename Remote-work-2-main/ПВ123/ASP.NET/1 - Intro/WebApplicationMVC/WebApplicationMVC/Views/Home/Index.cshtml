@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    List<string> arr = new List<string>();
+    arr.Add("Farid");
+    arr.Add("Sawa");
+    arr.Add("Pawa");
+    arr.Add("Mawa");
+
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_Layout";
+}
+
+<h1>Index</h1>
+
+<ul>
+    @foreach (var item in arr)
+    {
+        <li>@item</li>
+    }
+
+  @*  <li>@arr[0]</li>
+    <li>@arr[1]</li>
+    <li>@arr[2]</li>
+    <li>@arr[3]</li>*@
+</ul>
+

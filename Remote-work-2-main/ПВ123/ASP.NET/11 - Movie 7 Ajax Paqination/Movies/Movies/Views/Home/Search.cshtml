@@ -1,0 +1,161 @@
+﻿@using Movies.Models
+
+@{
+    ViewData["Title"] = "Search";
+}
+@model SearchViewModel
+
+
+@if (!string.IsNullOrWhiteSpace(@Model.Title) && !Model.Response.Equals("False"))
+{
+    <h1>Search results by title: @Model.Title  (Count : @Model.TotalResults )</h1>
+    <p>Total pages : @Model.TotalPages</p>
+
+
+
+
+    <div class="container">
+        <div id="movieResults" class="row">
+            @foreach (Movie item in @Model.Movies)
+            {
+                <div class="col-3">
+                    <partial name="_MovieCardPartial" model="@item"></partial>
+                </div>
+            }
+        </div>
+
+        <br>
+        <hr>
+        <button id="buttonNext" class="btn btn-primary">Next</button>
+        <hr>
+        <br>
+
+
+
+
+
+        <nav hidden aria-label="Page navigation example">
+            <ul class="pagination justify-content-center align-content-center">
+
+                @if (@Model.CurrentPage > 1)
+                {
+                    <li class="page-item"><a class="page-link" asp-controller="Home" asp-action="Search" asp-route-page="@(Model.CurrentPage-1)" asp-route-title="@Model.Title">Previous</a></li>
+
+                }
+                @for (var i = @Model.CurrentPage - @Model.SizePages; i <= @Model.CurrentPage + @Model.SizePages; i++)
+                {
+                    if (i > 0 && i <= @Model.TotalPages)
+                    {
+                        <li class="page-item @(Model.CurrentPage==i?"active":"")"><a class="page-link" asp-controller="Home" asp-action="Search" asp-route-page="@i" asp-route-title="@Model.Title">@i</a></li>
+                    }
+                }
+
+                @if (@Model.CurrentPage < @Model.TotalPages)
+                {
+                    <li class="page-item"><a class="page-link" asp-controller="Home" asp-action="Search" asp-route-page="@(Model.CurrentPage+1)" asp-route-title="@Model.Title">Next</a></li>
+
+                }
+
+
+            </ul>
+        </nav>
+
+
+    </div>
+
+
+
+}
+else
+{
+    <h3>No results!</h3>
+}
+
+
+
+<partial name="_ModalWindowPartial"></partial>
+
+
+
+
+@section Scripts
+    {
+    <script>
+        //let page = '@Model.CurrentPage';
+        //let totalPages = '@Model.TotalPages';
+        //let url = `@Url.ActionLink("SearchResult","Home",new { title = Model.Title })`;
+
+initPagination(@Model.CurrentPage, `@Url.ActionLink("SearchResult","Home",new { title = Model.Title })`, @Model.TotalPages);
+
+
+//loadMovies();
+        //$('#buttonNext').click(async function() {
+        //    page++;
+        //        console.log(page);
+        //        let url = `@Url.ActionLink("SearchResult","Home",new { title = Model.Title })`;
+        //        let response = await fetch(`${url}?page=${page}`);
+
+        //        console.log(`${url}&page=${page}`);
+        //        let result = await response.text();
+        //        //  console.log(result);
+
+        //        $('#movieResults').append(result);
+          
+        
+
+        //    if (totalPages == page) $(this).remove();
+        
+
+        //});
+
+    </script>
+  }
+
+
+    @*@section Scripts
+    {
+    <script>
+let page = @Model.CurrentPage;
+let title = '@Model.Title';
+let url = `@Url.ActionLink("SearchResult","Home",new { title = Model.Title ,page = @Model.CurrentPage})`;
+
+        $('#buttonNext').click(async function() {
+            page++;
+
+            let response = await fetch(`/Home/SearchResult?title=${title}&page=${page}`);
+            let result = await response.text();
+            console.log(result);
+        });
+
+    </script>
+  }*@
+
+
+
+
+    @*
+
+  @section Scripts
+  {
+   <script>
+        console.log('hello');
+
+$('[data-open-modal]').click(async function() {
+
+    event.preventDefault();
+
+    let url = $(this).attr('href');
+    let response = await fetch(url);
+    let result = await response.text();
+      console.log(result)
+
+    $('.modal-body').html(result);
+    $('#movieModal').modal('show');
+
+})
+   </script>
+
+  }
+*@
+
+

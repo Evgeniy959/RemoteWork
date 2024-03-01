@@ -1,0 +1,15 @@
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\bin\Debug\net6.0\PatternBuilder.exe
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\bin\Debug\net6.0\PatternBuilder.deps.json
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\bin\Debug\net6.0\PatternBuilder.runtimeconfig.json
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\bin\Debug\net6.0\PatternBuilder.dll
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\bin\Debug\net6.0\PatternBuilder.pdb
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.csproj.AssemblyReference.cache
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.AssemblyInfoInputs.cache
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.AssemblyInfo.cs
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.csproj.CoreCompileInputs.cache
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.dll
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\refint\PatternBuilder.dll
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.pdb
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\PatternBuilder.genruntimeconfig.cache
+C:\Users\f-abd\source\repos\PatternBuilder\PatternBuilder\obj\Debug\net6.0\ref\PatternBuilder.dll

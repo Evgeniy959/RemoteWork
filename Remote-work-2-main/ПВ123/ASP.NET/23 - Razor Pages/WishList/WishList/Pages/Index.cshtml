@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="#">@ViewData["Messages"]</a>.</p>
+    <p>@Model.Messages.ToLower()</p>
+
+   @* <form method="post">
+        <label>Messages : </label>
+        <input type="text" name="Messages" />
+        <button type="submit">Save</button>
+    </form>*@
+
+     <form method="post">
+        <label asp-for="Messages"></label>
+        <input asp-for="Messages" type="text" name="Messages" />
+        <span asp-validation-for="Messages"></span>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}

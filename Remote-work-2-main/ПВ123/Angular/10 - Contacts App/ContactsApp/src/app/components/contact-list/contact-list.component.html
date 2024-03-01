@@ -1,0 +1,16 @@
+<h1>Contacts List</h1>
+
+
+
+
+<div class="list-group">
+    <a *ngFor="let contact of contactService.contacts" [routerLink]="['/contact',contact.id]" class="list-group-item list-group-item-action border p-3">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{contact.name}} {{contact.surname}}</h5>
+            <small class="text-body-secondary">3 days ago</small>
+        </div>
+        <p class="mb-1">{{contact.phone}}.</p>
+        <small class="text-body-secondary">{{contact.email}}</small>
+    </a>
+
+</div>

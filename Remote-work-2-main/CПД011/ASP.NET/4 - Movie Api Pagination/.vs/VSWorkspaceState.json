@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MovieApi",
+    "\\MovieApi\\MovieApi",
+    "\\MovieApi\\MovieApi\\Views",
+    "\\MovieApi\\MovieApi\\Views\\Home",
+    "\\MovieApi\\MovieApi\\Views\\Shared"
+  ],
+  "SelectedNode": "\\MovieApi\\MovieApi\\Views\\Shared\\_MovieCardPartial.cshtml",
+  "PreviewInSolutionExplorer": false
+}

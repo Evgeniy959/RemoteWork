@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@*<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+    <h1>Phone number : @ViewData["Phone"]</h1>
+    <h1>Name : @ViewData["Name"]</h1>
+*@
+
+ @*if (@Boolean.Parse(TempData["gender"].ToString()))
+  //  {
+        <p>Hello @TempData["name"]</p>
+  //  }
+  //  else
+  //  {
+  //        <p>Bye @TempData["name"]</p>
+  //  }*@
+
+@*    <p>Hello @TempData["name"]</p>*@
+
+
+@* @if (TempData.ContainsKey("message"))
+    {
+        <div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">@TempData["message"]</button>
+    }
+<ul>
+    
+    @foreach (var item in ViewBag.Data)
+    {
+        <li>@item</li>
+    }*@

@@ -1,0 +1,32 @@
+﻿@model RegistrationViewModel
+@{
+    ViewData["Title"] = "Registry";
+}
+
+<h1>Registry</h1>
+
+
+<form asp-action="Registry" mmethod="POST" asp-controller="Home">
+  <div class="mb-3">
+    <label asp-for="Login"></label>
+    <input asp-for="Login">
+    <span class="text-danger" asp-validation-for="Login"></span>
+  </div> 
+  <div class="mb-3">
+    <label asp-for="Password"></label>
+    <input asp-for="Password">
+    <span class="text-danger" asp-validation-for="Password"></span>
+  </div> 
+  <div class="mb-3">
+    <label asp-for="PasswordAgain"></label>
+    <input asp-for="PasswordAgain">
+    <span class="text-danger" asp-validation-for="PasswordAgain"></span>
+  </div> 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}

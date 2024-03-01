@@ -1,0 +1,69 @@
+<!-- <a appLink appColor="green" href="https://www.google.com">Google</a>
+<hr>
+<a appLink appColor="blue" href="https://www.youtube.com">Youtube</a>
+<hr>
+<a appLink appColor="yellow" href="https://www.yandex.ru">Yandex</a> -->
+
+
+<!--
+<a appLink="green"  href="https://www.google.com">Google</a>
+<hr>
+<a appLink="blue" href="https://www.youtube.com">Youtube</a>
+<hr>
+<a appLink="yellow" href="https://www.yandex.ru">Yandex</a> -->
+
+
+<!-- <button (click)="show=!show">{{show?'hide':'show'}}</button>
+
+
+<h1 *ngIf="show else elseTemplate">Hello Admin</h1>
+
+<ng-template #elseTemplate>
+    <h1>Hello user</h1>
+</ng-template> -->
+
+
+<!-- <h1 *ngIf="show">Hello</h1>
+
+
+
+<ng-template [ngIf]="show">
+    <h1>Hello</h1>
+</ng-template> -->
+
+
+
+<!-- <h1 *ngIf="json else loading">{{json.toUpperCase()}}</h1>
+
+<ng-template #loading>
+    <h1>Loading....</h1>
+</ng-template> -->
+
+
+<!--
+<button (click)="onChangeLanguage('en')">EN</button>
+<button (click)="onChangeLanguage('ru')">RU</button>
+<button (click)="onChangeLanguage('az')">AZ</button>
+
+
+<p *ngIf="currentLang == 'en'">Hello</p>
+<p *ngIf="currentLang == 'ru'">Привет</p>
+<p *ngIf="currentLang == 'az'">Salam</p> -->
+
+
+
+
+
+<button (click)="onChangeLanguage('en')">EN</button>
+<button (click)="onChangeLanguage('ru')">RU</button>
+<button (click)="onChangeLanguage('az')">AZ</button>
+
+
+<p *appLang="'en'">Hello</p>
+<p *appLang="'ru'">Привет</p>
+<p *appLang="'az'">Salam</p>
+
+
+<!-- <ng-template [appLang]="'en'">
+  <p>Hello</p>
+</ng-template> -->

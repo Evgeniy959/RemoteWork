@@ -1,0 +1,23 @@
+﻿@model Post
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are you sure want to delete @Model.Title ? </h1>
+<div class="row w-75">
+    <div class="col-6 w-25">
+        <a asp-action="Index" asp-controller="Home" asp-route-id="@Model.Id" class="btn btn-secondary w-100">Cancel</a>
+    </div>
+    <div class="col-6 w-25">
+        <form asp-action="ConfirmDelete" asp-controller="Home"  method="post">
+            <input type="hidden" asp-for="Id"/>
+            <input type="submit" value="Delete" class="btn btn-danger w-100"/>
+        </form>
+         @* <a asp-action="ConfirmDelete" asp-controller="Home" asp-route-id="@Model.Id"  >Delete</a>*@
+    </div>
+</div>
+
+
+
+//form
+

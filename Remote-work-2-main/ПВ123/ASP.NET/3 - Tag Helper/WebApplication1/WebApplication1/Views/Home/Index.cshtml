@@ -1,0 +1,25 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "Home Page"; 
+}
+<h1>Index</h1>
+<div class="text-center">
+
+ 
+
+<h1>@Model.Id</h1>
+<h1>@Model.Name</h1>
+<h1>@Model.Surname</h1>
+
+</div>
+
+
+@section Scripts{
+    <script>
+$('h1').click(function() {
+    $(this).text('Clicked!!!');
+})
+</script>
+}
+
+

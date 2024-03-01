@@ -1,0 +1,17 @@
+body {
+  margin-top: 100px;
+}
+
+.valid {
+  border: 13px solid green;
+}
+
+.invalid {
+  border: 13px solid red;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=style.css.map */

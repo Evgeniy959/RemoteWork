@@ -1,0 +1,25 @@
+<!-- <p (click)="onTextClick()">calc works!</p> -->
+<!-- <input type="text" value="{{text}}"> -->
+<!-- <input type="text" [value]="text"> -->
+<!-- <p>{{text}}</p> -->
+<!-- <input #textInput type="text" (keyup)="onKeyUp(textInput.value)">
+<p>{{textInput.value}}</p> -->
+
+
+<!-- <p>{{text}}</p>
+<input type="text" [(ngModel)]="text"> -->
+
+
+<input [(ngModel)]="num1" (input)="onCalcl()" type="number">
+<!-- <span>+</span> -->
+<select (change)="onCalcl()" [(ngModel)]="operation">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input (input)="onCalcl()" [(ngModel)]="num2" type="number">
+
+<!-- <button (click)="onCalcl()">Calc</button> -->
+<span>= {{result}}</span>
+<h3>{{operation}}</h3>

@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient("#4287f5", "#42f5b9", "##adf542", "#f54242");
+  background-size: 400% 400%;
+  animation: myAnimation 10s ease infinite;
+}
+
+@keyframes myAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}/*# sourceMappingURL=style_20230303215147.css.map */

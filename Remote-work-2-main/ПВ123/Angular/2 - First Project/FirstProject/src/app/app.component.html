@@ -1,0 +1,41 @@
+<h1>Hello {{name}}</h1>
+<h1 title="{{helpText}}">Hello {{name.toLocaleUpperCase()}}</h1>
+<h1 [title]="helpText">Hello {{name.toLocaleUpperCase()}}</h1>
+<h1 [attr.title]="helpText">Hello {{name.toLocaleUpperCase()}}</h1>
+<p>5 + 10</p>
+
+<button (click)="onButtonClick()">Click</button>
+<button on-click="onButtonClick()">Click</button>
+<hr>
+<button (click)="onButtonChangeStatus()">Change status</button>
+<h1 *ngIf="isAdmin">Hello {{name}} Admin</h1>
+<h1 *ngIf="!isAdmin">Hello {{name}} User</h1>
+<hr>
+<button (click)="onButtonChangeStatus()">Change status</button>
+<h1 [hidden]="isAdmin">Hello {{name}} Admin</h1>
+<h1 [hidden]="!isAdmin">Hello {{name}} User</h1>
+
+<hr>
+
+<button (click)="onButtonChangeColor()">Change color</button>
+<!-- <div [ngSwitch]="currentColor">
+    <p *ngSwitchCase="0" style="background-color: red;">Red</p>
+    <p *ngSwitchCase="1" style="background-color: green;">Green</p>
+    <p *ngSwitchCase="2" style="background-color: blue;">Blue</p>
+</div>
+ -->
+
+<div [ngSwitch]="currentColor">
+    <p *ngSwitchCase="Color.Red" style="background-color: red;">Red</p>
+    <p *ngSwitchCase="Color.Green" style="background-color: green;">Green</p>
+    <p *ngSwitchCase="Color.Blue" style="background-color: blue;">Blue</p>
+    <p *ngSwitchDefault>Значение по умолчанию</p>
+</div>
+
+
+
+<ul>
+    <li *ngFor="let item of products;let i = index">{{i+1}}) {{item}}</li>
+</ul>
+
+<!-- {{}} , () , [] , [()] -->

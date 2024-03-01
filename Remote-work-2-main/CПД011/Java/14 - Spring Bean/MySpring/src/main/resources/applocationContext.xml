@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+>
+    <context:property-placeholder location="MusicPlayer.properties"></context:property-placeholder>
+
+
+    <bean id="rockMusic" class="com.topacademy.springapp.RockMusic"
+
+    ></bean>
+
+    <bean id="classicMusic" class="com.topacademy.springapp.ClassMusic"
+
+    ></bean>
+
+    <bean id="popMusic" class="com.topacademy.springapp.PopMusic"
+
+    ></bean>
+
+    <bean id="musicPlayer" class="com.topacademy.springapp.MusicPlayer">
+        <constructor-arg ref="classicMusic"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="musicList">
+            <list>
+                <ref bean="classicMusic"/>
+                <ref bean="popMusic"/>
+                <ref bean="rockMusic"/>
+            </list>
+        </property>
+    </bean>
+
+<!--    <bean id="testBean"-->
+<!--          class="com.topacademy.springapp.TestBean"-->
+<!--          scope="singleton"-->
+<!--          init-method="InitMethod"-->
+<!--          destroy-method="DestroyMethod"-->
+<!--          factory-method="factoryMethod"-->
+<!--    >-->
+
+<!--        <property name="name" value="Farid"/>-->
+<!--        <property name="surname" value="Abdullayev"/>-->
+<!--        <property name="age" value="27"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="testBean2"-->
+<!--          class="com.topacademy.springapp.TestBean"-->
+<!--          scope="singleton"-->
+<!--          init-method="InitMethod"-->
+<!--          destroy-method="DestroyMethod"-->
+<!--    >-->
+
+<!--        <property name="name" value="Farid"/>-->
+<!--        <property name="surname" value="Abdullayev"/>-->
+<!--        <property name="age" value="27"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="testBean"-->
+<!--          class="com.topacademy.springapp.TestBean">-->
+<!--        -->
+<!--        <constructor-arg name="name" value="Farid" />-->
+<!--    </bean>-->
+
+
+</beans>

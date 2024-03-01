@@ -1,0 +1,17 @@
+@model Post
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+
+
+<h2>@Model.Id</h2>
+<h2>@Model.Title</h2>
+<h2>@Model.Content</h2>
+<img src="@Model.ImageUrl" />
+<h2>@Model.Date</h2>
+
+@foreach(var item in Model.PostTags){
+    <a class="btn btn-info">@item.Tag.Name</a>
+}

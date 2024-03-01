@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Movies",
+    "\\Movies\\Controllers",
+    "\\Movies\\Extensions",
+    "\\Movies\\Models",
+    "\\Movies\\Services",
+    "\\Movies\\Views",
+    "\\Movies\\Views\\Shared",
+    "\\Movies\\wwwroot",
+    "\\Movies\\wwwroot\\js"
+  ],
+  "SelectedNode": "\\Movies.sln",
+  "PreviewInSolutionExplorer": false
+}
